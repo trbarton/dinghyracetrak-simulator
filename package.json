@@ -1,0 +1,75 @@
+{
+    "name": "dinghyracetraksim",
+    "productName": "DinghyRaceTrakSimulator",
+    "version": "1.0.0",
+    "description": "A simple tracking simulator",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "eslint src --color"
+    },
+    "keywords": [],
+    "author": "tombarton",
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "dmg"
+                ],
+                "linux": [
+                    "deb",
+                    "rpm"
+                ]
+            },
+            "electronPackagerConfig": {
+                "packageManager": "yarn",
+                "icon": "./icons/win/icon.ico"
+            },
+            "electronWinstallerConfig": {
+                "name": "DinghyRaceTrak",
+                "loadingGif": "./icons/win/install.gif",
+                "setupIcon": "./icons/win/icon.ico"
+            },
+            "electronInstallerDMG": {
+                "background": "./icons/mac/background.png",
+                "icon": "./icons/mac/icon.icns",
+                "format": "ULFO"
+            },
+            "electronInstallerDebian": {},
+            "electronInstallerRedhat": {},
+            "github_repository": {
+                "owner": "trbarton",
+                "name": "dinghyracetrak-simulator"
+            },
+            "windowsStoreConfig": {
+                "packageName": "",
+                "name": "trackingsimulation"
+            }
+        }
+    },
+    "dependencies": {
+        "electron-compile": "^6.4.2",
+        "electron-squirrel-startup": "^1.0.0",
+        "jquery": "^3.2.1",
+        "mosca": "^2.7.0"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "electron-forge": "^4.1.3",
+        "electron-prebuilt-compile": "1.7.9",
+        "eslint": "^3",
+        "eslint-config-airbnb": "^15",
+        "eslint-plugin-import": "^2",
+        "eslint-plugin-jsx-a11y": "^5",
+        "eslint-plugin-react": "^7"
+    }
+}

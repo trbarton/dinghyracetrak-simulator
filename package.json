@@ -1,7 +1,7 @@
 {
     "name": "dinghyracetraksim",
     "productName": "DinghyRaceTrakSimulator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple tracking simulator",
     "main": "src/index.js",
     "scripts": {
@@ -58,7 +58,8 @@
         "electron-compile": "^6.4.2",
         "electron-squirrel-startup": "^1.0.0",
         "jquery": "^3.2.1",
-        "mosca": "^2.7.0"
+        "mosca": "^2.7.0",
+        "mqtt": "^2.14.0"
     },
     "devDependencies": {
         "babel-plugin-transform-async-to-generator": "^6.24.1",

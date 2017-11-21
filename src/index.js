@@ -114,7 +114,7 @@ function start() {
       if (counter < array.length && runSim) {
           client.publish('boats', array[counter])
           counter++
-          setTimeout(beginPublishing(), 50)
+          setTimeout(beginPublishing, 50)
       } else {
           counter = 0;
       }
